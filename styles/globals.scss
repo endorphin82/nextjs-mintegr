@@ -1,0 +1,12 @@
+@import 'null';
+@import 'nav';
+body{
+  background-color: $bc01;
+  color: $tc02;
+}
+.flex-around{
+  //display: flex;
+  //flex-direction: column;
+  //position: absolute;
+  //justify-content: space-around;
+}
