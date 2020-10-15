@@ -7,6 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 20px 0 60px 0;
   // .header__logo
   &__logo img {
     width: 214px;
@@ -17,55 +18,153 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    font-size: 13px;
+    color: #b2b2b2;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.0;
+    float: right;
 
-    a {
+  }
+
+  &__nav {
+    display: flex;
+    border-bottom: 1px solid $borderColor01;
+
+    li {
+      position: relative;
+    }
+
+    li:before {
+      background-color: $bc01;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 55px;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease;
+    }
+
+    > li {
+      font-size: 13px;
+      color: $tc02;
+    }
+
+    li a {
+      color: $tc01;
+      display: block;
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 300;
+      border: none;
+      list-style: none;
+      margin: 0;
+      outline: 0;
       font-size: 19px;
-      font-weight: 700;
-      color: #222;
     }
 
-    a:hover {
-      color: $primary_button_color;
+    > li > ul > li > a {
+      font-family: $fontfamilyOpenSans-serif;
+      font-size: 13px;
+      //color: #b2b2b2;
+      line-height: 18px;
+      font-weight: 4300;
+      white-space: nowrap;
+      padding: 0 15px;
+      text-align: left;
     }
 
-    ul {
-      display: flex;
+    > li > a {
+
+      text-align: center;
+      visibility: inherit;
+      transition: all 0.3s ease;
+      font-family: $fontfamilyOpenSans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 10px 44px 28px;
+
+      background: none;
+      cursor: pointer;
     }
 
-    ul li {
-      margin: 5px;
+
+    > li > ul {
+      background: rgba(133, 170, 212, 0.25);
 
     }
-  ul li:before {
-    content: '';
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 5px;
-    background: #fff;
 
+    > li > ul {
+      padding: 15px 0;
+
+    }
+
+    > li > ul > li {
+      padding: 5px 0;
+    }
+
+    > li > ul > li:hover {
+      top: 100%;
+      left: 0;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    #services {
+
+    }
+
+    #partnerships {
+      li > a {
+        padding: 0 80px 0 15px;
+      }
+    }
+
+    #company {
+      li > a {
+        padding: 0 30px 0 15px;
+      }
+    }
+
+    #faq {
+      li > a {
+        padding: 0 30px 0 15px;
+      }
+    }
+
+    #services:hover:before {
+      width: 260px;
+      transition: all 0.3s ease;
+    }
+
+    #partnerships:hover:before {
+      width: 210px;
+      transition: all 0.3s ease;
+    }
+
+    #company:hover:before {
+      width: 164px;
+      transition: all 0.3s ease;
+    }
+
+    #faq:hover:before {
+      width: 138px;
+      transition: all 0.3s ease;
+    }
+
+    #portfolio:hover:before {
+      width: 182px;
     }
 
     ul li ul:before {
     }
 
-    ul > li > ul:after {
-      content: "";
-      position: absolute;
-      top: 10px;
-      background-color: #D8D8D8;
-      display: block;
-      width: 50px;
-      height: 1px;
-    }
-
     li ul {
       display: none;
+      background: rgba(133, 170, 212, 0.25);
     }
 
     li:hover ul {
@@ -74,8 +173,6 @@
 
     li:hover ul {
       position: absolute;
-      //top: 50px;
-      //padding: 5px;
     }
   }
 }

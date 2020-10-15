@@ -10,8 +10,8 @@ export function Navigation() {
           </a>
         </Link>
       </div>
-      <ul>
-        <li>
+      <ul className="header__nav">
+        <li id="services">
           <a href="#">services</a>
           <ul>
             <li>
@@ -32,7 +32,7 @@ export function Navigation() {
           </ul>
         </li>
 
-        <li>
+        <li  id="partnerships">
           <a href="#">partnerships</a>
           <ul>
             <li>
@@ -48,7 +48,7 @@ export function Navigation() {
           </ul>
         </li>
 
-        <li>
+        <li id="company">
           <a href="#">company</a>
           <ul>
             <li>
@@ -69,7 +69,7 @@ export function Navigation() {
           </ul>
         </li>
 
-        <li>
+        <li id="faq">
           <a href="#">faq</a>
           <ul>
             <li>
@@ -85,7 +85,7 @@ export function Navigation() {
           </ul>
         </li>
 
-        <li>
+        <li id="portfolio">
           <Link href={'/portfolio'}>
             <a>portfolio</a>
           </Link>
