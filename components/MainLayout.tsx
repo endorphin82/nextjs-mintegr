@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import {Navigation} from "./Navigation";
+import {Header} from "./Header";
+import {Footer} from "./Footer";
 
 export function MainLayout({children}) {
   return (
@@ -11,7 +13,7 @@ export function MainLayout({children}) {
         <meta charSet="utf-8"/>
       </Head>
 
-      <Navigation/>
+      <Header/>
 
       <main className="main">
         <div className="container">
@@ -19,6 +21,7 @@ export function MainLayout({children}) {
         </div>
       </main>
 
+      <Footer/>
     </>
   )
 }

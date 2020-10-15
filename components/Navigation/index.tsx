@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Navigation() {
   return (
-    <nav className="header__menu">
+    <nav className="header__menu container">
       <div className="header__logo">
         <Link href={'/'}>
           <a>
@@ -10,7 +10,6 @@ export function Navigation() {
           </a>
         </Link>
       </div>
-
       <ul>
         <li>
           <a href="#">services</a>

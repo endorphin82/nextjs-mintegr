@@ -1,12 +1,23 @@
 @import 'null';
 @import 'nav';
+@import 'main';
+@import 'footer';
+
+
 body{
   background-color: $bc01;
   color: $tc02;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 .flex-around{
   //display: flex;
   //flex-direction: column;
   //position: absolute;
   //justify-content: space-around;
+}
+
+@media (min-width: 1200px){
+  .container {
+    width: 1170px;
+  }
 }
