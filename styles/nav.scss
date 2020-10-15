@@ -7,10 +7,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px 0 60px 0;
+  padding: 50px 0 60px 0;
+
   // .header__logo
   &__logo img {
-    width: 214px;
+    width: 125px;
   }
 
   // .header__menu
@@ -19,7 +20,7 @@
     justify-content: space-around;
     align-items: flex-end;
     font-size: 13px;
-    color: #b2b2b2;
+    color: $tc02;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -70,9 +71,8 @@
     > li > ul > li > a {
       font-family: $fontfamilyOpenSans-serif;
       font-size: 13px;
-      //color: #b2b2b2;
       line-height: 18px;
-      font-weight: 4300;
+      font-weight: 400;
       white-space: nowrap;
       padding: 0 15px;
       text-align: left;
@@ -95,12 +95,10 @@
 
     > li > ul {
       background: rgba(133, 170, 212, 0.25);
-
     }
 
     > li > ul {
       padding: 15px 0;
-
     }
 
     > li > ul > li {
@@ -146,7 +144,7 @@
     }
 
     #company:hover:before {
-      width: 164px;
+      width: 155px;
       transition: all 0.3s ease;
     }
 
