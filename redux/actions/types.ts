@@ -1,0 +1,1 @@
+export const IS_OPEN_HAMBURGER = "IS_OPEN_HAMBURGER"

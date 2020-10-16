@@ -1,3 +1,4 @@
+
 .header {
   justify-content: center;
   display: flex;
@@ -28,11 +29,83 @@
     line-height: 1.0;
     float: right;
 
+    &-icon {
+      //display: none;
+      cursor: pointer;
+
+      &.active span {
+        transform: scale(0);
+        background-color: #64C29E;
+      }
+
+      &.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+        background-color: #64C29E;
+
+      }
+
+      &.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        background-color: #64C29E;
+      }
+
+      // .menu__icon
+      @media (max-width: $md3+px) {
+
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+
+        & span {
+          position: absolute;
+          //top: 50%;
+          top: 9px;
+          width: 100%;
+          height: 2px;
+          background-color: #4D4959;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before,
+        &:after {
+          content: "";
+          background-color: #4D4959;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before {
+          top: 0;
+        }
+
+        &:after {
+          bottom: 0;
+        }
+      }
+
+    }
+
+  }
+
+  &__logo {
+    z-index: 4;
+    top: 20px !important;
+    left: 30px !important;
   }
 
   &__nav {
     display: flex;
     border-bottom: 1px solid $borderColor01;
+
 
     li {
       position: relative;
@@ -86,7 +159,7 @@
       font-family: $fontfamilyOpenSans-serif;
       font-size: 14px;
       line-height: 20px;
-      padding: 10px 44px 28px;
+      padding: 10px 44px 28px 44px;
 
       background: none;
       cursor: pointer;
@@ -112,7 +185,9 @@
     }
 
     #services {
-
+      li > a {
+        padding: 0 80px 0 15px;
+      }
     }
 
     #partnerships {
@@ -134,7 +209,7 @@
     }
 
     #services:hover:before {
-      width: 260px;
+      width: 319px;
       transition: all 0.3s ease;
     }
 
@@ -171,6 +246,108 @@
 
     li:hover ul {
       position: absolute;
+    }
+  }
+}
+
+@media (max-width: $md3+px) {
+  .header {
+
+    li ul {
+      background: $bc081 !important;
+    }
+
+    li:hover {
+      background: $bc081 !important;
+    }
+
+    #services,
+    #partnerships,
+    #company,
+    #faq,
+    #portfolio {
+      width: 100%;
+
+      > a {
+        text-align: start;
+        text-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+        font-size: 18px;
+        font-weight: 400;
+        color: $tc051;
+        //text-shadow: 0 3px 5px rgba(255, 255, 255, 1)
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+    }
+
+
+    li:hover ul {
+      position: static;
+      margin-left: 50px;
+    }
+
+    > li > ul > li:hover {
+      top: 100%;
+      left: 0;
+      //background: rgba(255, 255, 255, 0.3);
+    }
+
+    &__logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    &__nav.active {
+      left: 0;
+    }
+
+    &__empty.active {
+      display: block;
+      position: fixed;
+      width: 15%;
+      height: 100%;
+      background-color: #2d2d2d;
+      opacity: 0.5;
+      top: 0;
+      right: 0;
+      transition: all 0.5s ease 0s;
+    }
+
+    &__empty {
+      right: 100%;
+      transition: all 0.5s ease 0s;
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      left: -110%;
+      width: 85%;
+      height: 100%;
+      background-color: $bc081;
+      padding: 120px 0 0 0;
+      overflow: auto;
+      transition: all 0.3s ease 0s;
+
+      z-index: 3;
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li:before {
+        height: 1px;
+        opacity: 0.5;
+        background-color: $tc051;
+      }
+
+      li {
+        //padding: 0 0 25px 0 !important;
+
+      }
     }
   }
 }

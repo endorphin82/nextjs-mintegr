@@ -1,8 +1,21 @@
 import Link from "next/link";
+import {useSelector} from 'react-redux'
+import {useSetIsShowMenu} from "../../redux/hooks";
 
 export function Navigation() {
+  const isShowMenu = useSelector(state => state.hamburger.isOpen)
+  const setIsShowMenu = useSetIsShowMenu()
+
   return (
     <nav className="header__menu container">
+      <div
+        onClick={() => setIsShowMenu(!isShowMenu)}
+        className={isShowMenu ? "header__menu-icon active" : "header__menu-icon"}>
+        <span></span>
+      </div>
+      <div
+        onClick={() => setIsShowMenu(!isShowMenu)}
+        className={isShowMenu ? "header__empty active" : "header__empty"}/>
       <div className="header__logo">
         <Link href={'/'}>
           <a>
@@ -10,7 +23,7 @@ export function Navigation() {
           </a>
         </Link>
       </div>
-      <ul className="header__nav">
+      <ul className={isShowMenu ? "header__nav active" : "header__nav"}>
         <li id="services">
           <a href="#">services</a>
           <ul>
@@ -32,7 +45,7 @@ export function Navigation() {
           </ul>
         </li>
 
-        <li  id="partnerships">
+        <li id="partnerships">
           <a href="#">partnerships</a>
           <ul>
             <li>
