@@ -315,12 +315,13 @@
       opacity: 0.5;
       top: 0;
       right: 0;
-      transition: all 0.5s ease 0s;
+      transition: opacity 0.3s ease 0s;
+      transition-delay: 0.3s;
     }
 
     &__empty {
       right: 100%;
-      transition: all 0.5s ease 0s;
+      opacity: 0;
     }
 
     &__nav {

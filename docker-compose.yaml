@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  web_mintegr:
+    container_name: web_mintegr
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - '3001:3001'
