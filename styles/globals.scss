@@ -2,22 +2,27 @@
 @import 'nav';
 @import 'main';
 @import 'footer';
-
+@import 'page';
 
 body{
   background-color: $bc01;
   color: $tc02;
   //font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
 .flex-around{
-  //display: flex;
-  //flex-direction: column;
-  //position: absolute;
-  //justify-content: space-around;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 @media (min-width: 1200px){
   .container {
     width: 1170px;
   }
+}
+
+.tittle_first_letter_up:first-letter {
+  text-transform: uppercase;
 }
