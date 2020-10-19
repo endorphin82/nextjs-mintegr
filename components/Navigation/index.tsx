@@ -8,6 +8,14 @@ export function Navigation() {
 
   return (
     <nav className="header__menu container">
+
+      <div className="header__logo">
+        <Link href={'/'}>
+          <a>
+            <img src="/assets/imgs/header-logo.png" alt="Full Cycle Digital Agency"/>
+          </a>
+        </Link>
+      </div>
       <div
         onClick={() => setIsShowMenu(!isShowMenu)}
         className={isShowMenu ? "header__menu-icon active" : "header__menu-icon"}>
@@ -16,19 +24,12 @@ export function Navigation() {
       <div
         onClick={() => setIsShowMenu(!isShowMenu)}
         className={isShowMenu ? "header__empty active" : "header__empty"}/>
-      <div className="header__logo">
-        <Link href={'/'}>
-          <a>
-            <img src="/assets/imgs/header-logo.png" alt="Full Cycle Digital Agency"/>
-          </a>
-        </Link>
-      </div>
       <ul className={isShowMenu ? "header__nav active" : "header__nav"}>
         <li id="services">
           <a href="#">services</a>
           <ul>
             <li>
-              <Link href={'/development'}>
+              <Link href={'/magento-development'}>
                 <a>magento development</a>
               </Link>
             </li>

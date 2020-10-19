@@ -9,7 +9,9 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 50px 0 60px 0;
-
+&__empty{
+  //display: none;
+}
   // .header__logo
   &__logo img {
     width: 125px;
@@ -30,7 +32,7 @@
     float: right;
 
     &-icon {
-      //display: none;
+      display: none;
       cursor: pointer;
 
       &.active span {
@@ -42,7 +44,6 @@
         transform: rotate(45deg);
         top: 9px;
         background-color: $tc051;
-
       }
 
       &.active:after {
@@ -212,22 +213,22 @@
 
     #services:hover:before {
       width: 319px;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     #partnerships:hover:before {
       width: 210px;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     #company:hover:before {
       width: 155px;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     #faq:hover:before {
       width: 138px;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
 
     #portfolio:hover:before {
