@@ -1,0 +1,34 @@
+import Link from "next/link";
+
+export const GetQuote = () => {
+  return (
+    <div className="right-sidebar__get-quote get-quote">
+      <h2>get a quote</h2>
+      <div className="get-quote__widget">
+        <div className="get-quote__form-wrapper">
+          <form action="" className="get-quote__form">
+            <p>
+              <span>
+                <input type="text" placeholder="Name"/>
+              </span>
+            </p>
+            <p>
+              <span>
+                <input type="text" placeholder="Email"/>
+              </span>
+            </p>
+            <p>
+              <span>
+                <textarea name="your-message" rows="10" className="wpcf7-form-control wpcf7-textarea"
+                          aria-invalid="false" placeholder="Tell us about your project"/>
+              </span>
+            </p>
+            <p>
+              <input type="submit" value="Send" className="get-quote__form-submit"/>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  )
+}

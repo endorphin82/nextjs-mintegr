@@ -7,8 +7,7 @@ export function Navigation() {
   const setIsShowMenu = useSetIsShowMenu()
 
   return (
-    <nav className="header__menu container">
-
+    <nav className="header__menu">
       <div className="header__logo">
         <Link href={'/'}>
           <a>

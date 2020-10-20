@@ -80,6 +80,7 @@ ul.breadcrumb.breadcrumb__t {
   color: #b2b2b2;
   font-weight: normal;
   display: flex;
+  flex: 1 1 auto
   //margin-left: -30px;
 }
 
@@ -95,11 +96,11 @@ ul.breadcrumb.breadcrumb__t {
   //margin-left: 30px;
   width: 770px;
   position: static;
-  flex: 1 1 66%;
+  flex: 2 1 auto;
 }
 
 .right-sidebar {
-  flex: 1 1 33%;
+  flex: 1 1 auto;
   font-family: $fontTrebuchet;
   font-size: 13px;
   line-height: 18px;
@@ -113,14 +114,16 @@ ul.breadcrumb.breadcrumb__t {
   padding-top: 40px;
   overflow: hidden;
 
-  h2 {
-    margin: 9px 0;
-    text-rendering: optimizelegibility;
-    font-weight: lighter !important;
-    margin-top: 0;
-    margin-bottom: 22px;
-    font: normal 30px/30px Open Sans;
-    color: #1c1c1c;
+  &__nav-categories {
+   & > h2 {
+      margin: 9px 0;
+      text-rendering: optimizelegibility;
+      font-weight: lighter !important;
+      margin-top: 0;
+      margin-bottom: 22px;
+      font: normal 30px/30px Open Sans;
+      color: #1c1c1c;
+    }
   }
 
   &__nav {
@@ -143,6 +146,21 @@ ul.breadcrumb.breadcrumb__t {
       padding-left: 15px;
       background: url("../public/assets/imgs/list_arr.png") 0 6px no-repeat;
 
+      a {
+        line-height: 18px;
+        color: $tc05;
+        font-size: 13px;
+        font-weight: normal;
+        font-family: $fontfamilyOpenSans-serif;
+        transition: all 0.3s ease 0s;
+      }
+
+      a:hover {
+        color: $tc17;
+        transition: all 0.3s ease 0s;
+      }
     }
   }
 }
+
+//@import 'get-quote';

@@ -4,25 +4,38 @@
 @import 'footer';
 @import 'page';
 
-body{
+body {
   background-color: $bc01;
   color: $tc02;
-  //font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-.flex-around{
+.flex-around {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-@media (min-width: 1200px){
+
+@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
 
-.tittle_first_letter_up:first-letter {
-  text-transform: uppercase;
+@media (max-width: 1199px) {
+  .container {
+    width: 940px;
+  }
 }
+
+@media (max-width: 980px) {
+  main {
+    padding: 0 15px;
+  }
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
