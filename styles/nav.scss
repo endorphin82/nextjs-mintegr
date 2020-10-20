@@ -8,10 +8,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 50px 0 60px 0;
-&__empty{
-  //display: none;
-}
+  padding: 50px 0 120px 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 246px;
+    opacity: 0.2;
+    background-color: $bc09;
+  }
+
+
+  //background-image: url("https://m-integration.com/wp-content/uploads/2017/09/new-bg.jpg");
+
+  &__empty {
+    //display: none;
+  }
+
   // .header__logo
   &__logo img {
     width: 125px;
@@ -29,7 +45,6 @@
     padding: 0;
     list-style: none;
     line-height: 1.0;
-    float: right;
 
     &-icon {
       display: none;
@@ -54,7 +69,6 @@
 
       // .menu__icon
       @media (max-width: $md3+px) {
-
         display: block;
         position: absolute;
         top: 3%;
@@ -70,7 +84,7 @@
           width: 100%;
           height: 2px;
           background-color: $tc051;
-          box-shadow: 0 0 3px #fff;
+          box-shadow: 0 0 3px $bc01;
           transition: all 0.3s ease 0s;
         }
 
@@ -78,7 +92,7 @@
         &:after {
           content: "";
           background-color: $tc051;
-          box-shadow: 0 0 3px #fff;
+          box-shadow: 0 0 3px $bc01;
           position: absolute;
           left: 0;
           width: 100%;
@@ -94,9 +108,7 @@
           bottom: 0;
         }
       }
-
     }
-
   }
 
   &__logo {
@@ -121,7 +133,7 @@
       left: 0;
       top: 55px;
       width: 0;
-      height: 3px;
+      height: 5px;
       transition: all 0.3s ease;
     }
 
@@ -155,7 +167,6 @@
     }
 
     > li > a {
-
       text-align: center;
       visibility: inherit;
       transition: all 0.3s ease;
@@ -163,9 +174,15 @@
       font-size: 14px;
       line-height: 20px;
       padding: 10px 44px 28px 44px;
-
       background: none;
       cursor: pointer;
+      @media (max-width: 1199px) {
+        padding: 10px 26px 28px 28px;
+
+      }
+      @media (max-width: 980px) {
+        padding: 10px 15px 28px 15px;
+      }
     }
 
 
@@ -179,12 +196,14 @@
 
     > li > ul > li {
       padding: 5px 0;
+      transition: all 0.3s ease 0s;
     }
 
     > li > ul > li:hover {
       top: 100%;
       left: 0;
       background: rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease 0s;
     }
 
     #services {
@@ -222,7 +241,7 @@
     }
 
     #company:hover:before {
-      width: 155px;
+      width: 159px;
       transition: all 0.5s ease;
     }
 

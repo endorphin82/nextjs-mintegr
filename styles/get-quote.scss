@@ -1,0 +1,130 @@
+.get-quote {
+  &__widget {
+    font-family: $fontTrebuchet;
+    font-size: 13px;
+    line-height: 18px;
+    color: $tc02;
+    font-weight: normal;
+    padding: 13px;
+  }
+
+  &__form-wrapper {
+    font-family: $fontTrebuchet;
+    font-size: 13px;
+    line-height: 18px;
+    color: $tc02;
+    font-weight: normal;
+    unicode-bidi: isolate;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__form-wrapper p {
+    font-family: $fontTrebuchet;
+    font-size: 13px;
+    line-height: 18px;
+    color: $tc121;
+    font-weight: normal;
+    margin: 0 0 10px;
+  }
+
+  &__form-wrapper p span textarea {
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    color: $tc121;
+    font-family: $fontfamilyOpenSans-serif;
+    width: 100%;
+    resize: none;
+    border: 1px solid $borderColor011;
+  }
+
+  &__form-submit {
+    font-weight: normal;
+    font-family: $fontTrebuchet;
+    cursor: pointer;
+    width: auto;
+    background: $bc08;
+    border: none;
+    outline: none;
+    vertical-align: top;
+    color: $tc01;
+    height: 30px;
+    font-size: 14px;
+    display: block;
+    float: none;
+    margin: 20px auto 0;
+    padding: 5px 44px;
+  }
+
+  &__form-wrapper p span input {
+    margin: 0;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    border-radius: 0px;
+    vertical-align: middle;
+    box-shadow: none;
+    transition: border linear .2s, box-shadow linear .2s;
+    outline: none;
+    font-family: $fontfamilyOpenSans-serif;
+    height: 22px;
+    background: $tc01 none repeat scroll 0 0;
+    border: 1px solid $borderColor011;
+    color: $tc121;
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    box-sizing: content-box;
+  }
+
+  &__form-wrapper p span {
+    font-family: $fontTrebuchet;
+    font-size: 13px;
+    line-height: 18px;
+    color: $tc02;
+    font-weight: normal;
+    clear: both;
+    display: block;
+    margin: 3px 0 0;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.right-sidebar {
+  &__get-quote {
+    font-family: $fontTrebuchet;
+    font-size: 13px;
+    line-height: 18px;
+
+    font-weight: normal;
+    cursor: default;
+
+    max-width: 300px;
+    background: $bc04 none repeat scroll 0 0;
+    border: 1px solid $borderColor011;
+    box-sizing: border-box;
+    padding: 7px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: auto;
+    width: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    > h2 {
+      text-transform: uppercase;
+      margin: 10px 0 0 0 !important;
+      text-align: center;
+      color: $tc17;
+      border-bottom: 0 none;
+      font-size: 23px;
+      line-height: 1;
+      padding: 0;
+      font-weight: 400 !important;
+    }
+  }
+}
