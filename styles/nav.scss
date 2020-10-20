@@ -260,14 +260,18 @@
     li ul {
       display: none;
       background: rgba(133, 170, 212, 0.25);
+      //transition: height 1.1s ease-in-out;
     }
 
     li:hover ul {
       display: block;
+      //transition: height 1.1s ease-in-out;
     }
+
 
     li:hover ul {
       position: absolute;
+
     }
   }
 }
