@@ -3,6 +3,7 @@
 @import 'main';
 @import 'footer';
 @import 'page';
+@import 'menu';
 
 body {
   background-color: $bc01;
@@ -15,7 +16,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-
 
 @media (min-width: 1200px) {
   .container {
