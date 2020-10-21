@@ -104,14 +104,14 @@ ul.breadcrumb.breadcrumb__t {
   font-family: $fontTrebuchet;
   font-size: 13px;
   line-height: 18px;
-  color: #b2b2b2;
+  color: $tc02;
   font-weight: normal;
   float: left;
   min-height: 1px;
   //margin-left: 30px;
   width: 370px;
   position: static;
-  padding-top: 40px;
+  padding: 40px 30px;
   overflow: hidden;
 
   &__nav-categories {
@@ -163,4 +163,4 @@ ul.breadcrumb.breadcrumb__t {
   }
 }
 
-//@import 'get-quote';
+@import 'get-quote';

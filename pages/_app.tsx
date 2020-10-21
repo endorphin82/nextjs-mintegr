@@ -1,8 +1,10 @@
 import {Provider} from 'react-redux'
 import {store} from "../redux/store";
 
-import '../styles/globals.scss'
+import 'antd/dist/antd.css';
+import 'antd-mobile/dist/antd-mobile.css';
 
+import '../styles/globals.scss'
 
 function MyApp({Component, pageProps}) {
   return (
