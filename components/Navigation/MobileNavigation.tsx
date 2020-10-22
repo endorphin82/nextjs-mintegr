@@ -69,7 +69,6 @@ const data = [
   {
     value: '5',
     label: 'Faq',
-    isLeaf: true,
     children: [
       {
         label: 'General',
