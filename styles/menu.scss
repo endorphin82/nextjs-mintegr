@@ -1,19 +1,19 @@
 .foo-menu {
   position: relative;
-  z-index: 1000 !important;
+  z-index:1000 !important;
 }
 
 .menu-active .top-nav-bar{
-  z-index: 80;
+  z-index: 2;
 }
 
 .top-nav-bar {
   position: relative;
-  background-color: #008AE6;
-  color: #FFF;
+  background-color: $bc08;
+  color: $bc01;
 }
 .am-navbar-title {
-  color: #FFF!important;
+  color: $bc01 !important;
 }
 .menu-mask {
   content: ' ';
@@ -21,7 +21,19 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: $bc09;
   opacity: 0.4;
   z-index: 79;
+}
+.top-nav-bar {
+  display: none;
+}
+
+@media (max-width: $md3+px) {
+  .top-nav-bar {
+    display: flex;
+  }
+  .foo-menu {
+    min-height: 60vh;
+  }
 }

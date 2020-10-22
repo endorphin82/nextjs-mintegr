@@ -3,11 +3,18 @@ import {useSetIsShowMenu} from "../../redux/hooks";
 import {Menu, ActivityIndicator, NavBar} from 'antd-mobile';
 import {useState} from "react";
 import {useRouter} from 'next/router'
+import Link from "next/link";
 
-// TODO: https://usehooks.com/useWindowSize/
 const data = [
   {
     value: '1',
+    label: 'Home',
+    isLeaf: true,
+    link: '/'
+  },
+  {
+
+    value: '2',
     label: 'Services',
     children: [
       {
@@ -26,7 +33,7 @@ const data = [
         value: '3',
       }],
   }, {
-    value: '2',
+    value: '3',
     label: 'Partnerships',
     children: [
       {
@@ -40,7 +47,7 @@ const data = [
       }],
   },
   {
-    value: '3',
+    value: '4',
     label: 'Company',
     children: [
       {
@@ -60,7 +67,7 @@ const data = [
       }],
   },
   {
-    value: '4',
+    value: '5',
     label: 'Faq',
     isLeaf: true,
     children: [
@@ -76,14 +83,14 @@ const data = [
       }],
   },
   {
-    value: '5',
+    value: '6',
     label: 'Portfolio',
     isLeaf: true,
     link: '/portfolio'
   },
 ];
 
-export function Navigation() {
+export function MobileNavigation() {
   const router = useRouter()
   const isShowMenu = useSelector(state => state.hamburger.isOpen)
   const setIsShowMenu = useSetIsShowMenu()
@@ -91,26 +98,23 @@ export function Navigation() {
   const clientHeight = useSelector(state => state.client_height.clientHeight)
 
   const onChange = (value) => {
-    let label = '';
-    let link = '';
     data.forEach((dataItem) => {
       if (dataItem.value === value[0]) {
-        (dataItem.link != null) && router.push(dataItem.link)
-        // console.log(dataItem);
-        label = dataItem.label;
-        // link = dataItem.link;
+        if (dataItem.link != null) {
+          router.push(dataItem.link)
+          setIsShowMenu(false)
+        }
+
         if (dataItem.children && value[1]) {
           dataItem.children.forEach((cItem) => {
             if (cItem.value === value[1]) {
               router.push(cItem.link)
+              setIsShowMenu(false)
             }
           });
         }
       }
     });
-    // console.log(label);
-
-
   }
 
   const handleClick = (e) => {
@@ -123,7 +127,7 @@ export function Navigation() {
         setInitData(
           [...data]
         )
-      }, 500);
+      }, 100);
     }
   }
 
@@ -131,13 +135,18 @@ export function Navigation() {
     setIsShowMenu(false)
   }
 
+  const onOkHandle = () => {
+    setIsShowMenu(false)
+  }
+
   const menuEl = (
     <Menu
+      onOk={onOkHandle}
       className="foo-menu"
       data={initData}
       value={['1', '3']}
       onChange={onChange}
-      height={clientHeight * 0.6}
+      // height={clientHeight * 0.6}
     />
   );
   const loadingEl = (
@@ -154,14 +163,16 @@ export function Navigation() {
     <div className={isShowMenu ? 'menu-active' : ''}>
       <div>
         <NavBar
-          leftContent="Menu"
+          // leftContent={}
+          rightContent={<a><img onClick={handleClick} src="/assets/imgs/menu.svg"
+                                                 className="am-icon am-icon-md" alt=""/></a>}
           mode="light"
-          icon={<img src="https://gw.alipayobjects.com/zos/rmsportal/iXVHARNNlmdCGnwWxQPH.svg"
-                     className="am-icon am-icon-md" alt=""/>}
+          // icon={<img src="/assets/imgs/menu.svg"
+          //            className="am-icon am-icon-md" alt=""/>}
           onLeftClick={handleClick}
           className="top-nav-bar"
         >
-          Here is title
+          M-INTEGRATION
         </NavBar>
       </div>
       {isShowMenu ? initData ? menuEl : loadingEl : null}

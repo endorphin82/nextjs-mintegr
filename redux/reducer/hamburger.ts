@@ -1,14 +1,12 @@
-
-import { ActionsTypes } from "../store"
+import {ActionsTypes} from "../store"
 import {IS_OPEN_HAMBURGER} from "../actions/types";
-
 
 export type initialState = typeof initialState
 const initialState = {
   isOpen: false
 }
 
-export default (state: initialState  = initialState, action: ActionsTypes): initialState => {
+const hamburger = (state: initialState = initialState, action: ActionsTypes): initialState => {
   switch (action.type) {
     case IS_OPEN_HAMBURGER:
       return {
@@ -19,3 +17,5 @@ export default (state: initialState  = initialState, action: ActionsTypes): init
       return state
   }
 }
+
+export default hamburger

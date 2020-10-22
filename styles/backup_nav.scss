@@ -21,7 +21,6 @@
   //  background-color: $bc09;
   //}
 
-
   //background-image: url("https://m-integration.com/wp-content/uploads/2017/09/new-bg.jpg");
 
   &__empty {
@@ -377,4 +376,7 @@
       }
     }
   }
+}
+.foo-menu{
+  min-height: 60vh;
 }

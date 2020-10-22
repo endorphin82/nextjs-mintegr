@@ -1,12 +1,12 @@
 import {ActionsTypes} from "../store"
-import {CLIENT_HEIGHT, IS_OPEN_HAMBURGER} from "../actions/types";
+import {CLIENT_HEIGHT} from "../actions/types";
 
 export type initialState = typeof initialState
 const initialState = {
   clientHeight: 0
 }
 
-export default (state: initialState = initialState, action: ActionsTypes): initialState => {
+const client_height =  (state: initialState = initialState, action: ActionsTypes): initialState => {
   switch (action.type) {
     case CLIENT_HEIGHT:
       return {
@@ -17,3 +17,5 @@ export default (state: initialState = initialState, action: ActionsTypes): initi
       return state
   }
 }
+
+export default client_height;
