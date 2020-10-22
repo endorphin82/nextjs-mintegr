@@ -74,6 +74,9 @@ ul.breadcrumb.breadcrumb__t {
 }
 
 .row {
+  @media (max-width: $md3+px) {
+    flex-wrap: wrap;
+  }
   font-family: $fontTrebuchet;
   font-size: 13px;
   line-height: 18px;
@@ -85,6 +88,9 @@ ul.breadcrumb.breadcrumb__t {
 }
 
 .left-sidebar {
+  @media (max-width: $md3+px) {
+    flex: 1 0 100%;
+  }
   padding-top: 40px;
   font-family: $fontTrebuchet;
   font-size: 13px;
@@ -96,11 +102,14 @@ ul.breadcrumb.breadcrumb__t {
   //margin-left: 30px;
   width: 770px;
   position: static;
-  flex: 2 1 auto;
+  flex: 1 1 auto;
 }
 
 .right-sidebar {
-  flex: 1 1 auto;
+  @media (max-width: $md3+px) {
+    flex: 1 0 100%;
+  }
+  flex: 1 0 370px;
   font-family: $fontTrebuchet;
   font-size: 13px;
   line-height: 18px;
@@ -108,21 +117,19 @@ ul.breadcrumb.breadcrumb__t {
   font-weight: normal;
   float: left;
   min-height: 1px;
-  //margin-left: 30px;
-  width: 370px;
   position: static;
   padding: 40px 30px;
   overflow: hidden;
 
   &__nav-categories {
-   & > h2 {
-      margin: 9px 0;
+    & > h2 {
+      margin: 0 0 22px;
       text-rendering: optimizelegibility;
-      font-weight: lighter !important;
-      margin-top: 0;
-      margin-bottom: 22px;
+      //font-weight: lighter !important;
+
+
       font: normal 30px/30px Open Sans;
-      color: #1c1c1c;
+      color: $tc16;
     }
   }
 
@@ -164,3 +171,4 @@ ul.breadcrumb.breadcrumb__t {
 }
 
 @import 'get-quote';
+@import 'magento-development';
