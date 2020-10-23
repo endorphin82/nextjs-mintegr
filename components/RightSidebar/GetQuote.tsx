@@ -11,7 +11,7 @@ export const GetQuote = () => {
 
   return (
     <div className="right-sidebar__get-quote get-quote">
-      <Card bordered={false} hoverable title="get a quote" style={{width: 300, cursor: "default", margin: 0}}>
+      <Card bordered={false} hoverable title="get a quote" style={{maxWidth: 300, cursor: "default", margin: 0}}>
         <Form
           form={form}
           name="advanced_search"

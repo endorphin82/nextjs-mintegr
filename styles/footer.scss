@@ -1,5 +1,52 @@
-.footer {
+.scrollTop {
+  @media (max-width: $md4+px) {
+    display: none !important;
+  }
+  position: fixed;
+  right: 30px;
+  bottom: 120px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $bc82;
+  box-shadow: 0px 0px 10px 1px rgba(150, 150, 150, 0.4);;
+  z-index: 9;
+  text-align: center;
+  color: white;
+  transition: all 0.8s ease 0s;
 
+  &:hover {
+    background: $bc09;
+    box-shadow: 0 0 10px 2px $bc10;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 22.5px;
+    left: 9px;
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    background-color: $bc01;
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 22.5px;
+    right: 9px;
+    height: 5px;
+    display: inline-block;
+    width: 20px;
+    background-color: $bc01;
+    transform: rotate(45deg);
+  }
+}
+
+
+.footer {
   // .footer__partner
 
   &__partner {
@@ -21,7 +68,8 @@
     left: 25px;
     top: auto;
     width: 200px;
-    a > img{
+
+    a > img {
       width: 100%;
     }
   }
@@ -31,22 +79,28 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+    z-index: 2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif !important;
     position: fixed;
-    bottom: 15px;
+    // bottom: 15px;
     right: 20px;
     left: auto;
     width: auto;
     border-radius: 100px;
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    transition: all .4s, bottom .8s ease-in-out !important;
+    transition: all 0.4s, bottom 0.8s ease-in-out !important;
     cursor: pointer;
 
     padding: 0 25px;
 
     background-color: $tc05;
+    bottom: 54px;
+    @media (max-width: $md3+px) {
+      bottom: 10px
+    }
 
     &:hover {
       background-color: $tc051;
@@ -68,7 +122,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       //padding: 0;
-      transition: .6s ease-in-out;
+      transition: 0.6s ease-in-out;
       line-height: 54px;
       color: $tc01;
     }
@@ -93,48 +147,101 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 6px;
+    @media (max-width: $md3+px) {
+      margin: 0;
+    }
   }
 
   &__bottom__container {
-    @media (min-width: 1200px) {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-around;
-      width: 1170px;
+    //@media (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 1170px;
+    //}
+    @media (max-width: $md4+px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //flex-wrap: wrap;
     }
   }
 
   // .footer__empty
 
   &__empty {
+    order: 1;
+    @media (max-width: $md4+px) {
+      display: none;
+    }
   }
 
   // .footer__copyright
 
   &__copyright {
+    order: 3;
+    @media (max-width: $md4+px) {
+      order: 2 !important;
+    }
+
     p {
       font-family: $fontfamilyOpenSans-serif;
       font-weight: 400;
       font-size: 13px;
       line-height: 18px;
       color: $tc10;
+      margin: 0;
+    }
+
+    @media (max-width: $md3+px) {
+      p {
+        text-align: center;
+      }
+      p:nth-child(2) {
+        display: none;
+      }
     }
   }
 
-  // .footer__social-links
+  @media (max-width: $md4+px) {
+    &__social-links {
+      order: 1 !important;
+      margin-bottom: 20px !important;
+    }
+    &__bottom {
+      position: relative;
+    }
+    &__bottom:after {
+      content: '';
+      position: absolute;
+      top: 55px;
+      height: 1px;
 
+      width: 100%;
+      border-top: 1px solid #33333333;
+    }
+  }
+  // .footer__social-links
   &__social-links {
+    order: 3;
     display: flex;
-    //font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    //font-size: 13px;
-    //line-height: 18px;
-    //color:$tc02;
-    //font-weight: normal;
+    margin-bottom: 0;
+    //margin-right: 10px;
+    //font-variant: tabular-nums;
+    //font-feature-settings: 'tnum', "tnum";
+    //font-size: 14px;
+    //line-height: 1;
+    //color: #b2b2b2;
+    //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     //padding: 0;
-    ////position: absolute;
-    //top: 8px;
-    margin-right: 10px;
-    //right: 15px;
+    //margin: 0;
+    //border: 0;
+    //box-sizing: border-box;
+    //margin-top: 0;
+    //margin-bottom: 1em;
+    //display: flex;
+    //margin-right: 10px;
 
     li > a {
       background-repeat: no-repeat;
@@ -157,7 +264,6 @@
 }
 
 .row {
-
 }
 
 .footer-text {
@@ -166,7 +272,6 @@
   justify-content: center;
   padding: 20px;
 }
-
 
 #social-s {
   background-image: url(../public/assets/imgs/2017/01/social-skype.svg);
