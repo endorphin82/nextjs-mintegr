@@ -1,5 +1,6 @@
 
 .header {
+  // TODO: effect background header
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -9,7 +10,8 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 50px 0 120px 0;
-
+  //background-color: $bc09;
+  //opacity: 0.8;
   //&:before {
   //  content: "";
   //  position: absolute;
@@ -214,13 +216,52 @@
     }
 
     li ul {
+      //box-sizing: border-box;
       display: none;
-      background: rgba(133, 170, 212, 0.25);
-      //transition: height 1.1s ease-in-out;
+      //max-height: 0;
+      //overflow: hidden;
+      //opacity: 0;
+      //display: flex
+//      //display: none;
+//      flex: 0;
+//      //opacity: 0;
+//      //max-height: 0;
+//      //visibility: hidden;
+//      background: rgba(133, 170, 212, 0.25);
+//      //transition: height 1.1s ease-in-out;
+      transition: 2s ease;
+//position: relative;
+//      border: 1px solid red;
+//      flex: 0;
+
+
     }
 
     li:hover ul {
+      //box-sizing: border-box;
+
       display: block;
+      //opacity: 1;
+
+      //max-height: ;
+      //-webkit-transition: max-height 0.5s ease;
+      //transition: max-height 0.5s ease;
+      //overflow: hidden;
+      //overflow:hidden;
+      //transition:flex 0.3s ease-out; // note that we're transitioning flex, not height!
+      //height:auto;
+      //flex:1;
+      ////display: block;
+      //flex: 1;
+      //height:auto;
+      //visibility: visible;
+      ////max-height: 100%;
+      ////opacity: 1;
+      //border: 1px solid blue;
+      //
+      ////transition: max-height 1.1s ease-in-out;
+      //transition: 2s ease;
+
       // TODO: transition: height 1.1s ease-in-out;
     }
 

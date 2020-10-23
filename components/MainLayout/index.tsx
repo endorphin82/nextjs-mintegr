@@ -34,7 +34,9 @@ export function MainLayout({children}) {
         <meta charSet="utf-8"/>
       </Head>
       <MobileNavigation/>
+
       <Header/>
+
 
       <main className="main">
         <div className="container">

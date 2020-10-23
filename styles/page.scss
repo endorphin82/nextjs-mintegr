@@ -97,10 +97,10 @@ ul.breadcrumb.breadcrumb__t {
   line-height: 18px;
   color: #b2b2b2;
   font-weight: normal;
-  float: left;
+  //float: left;
   min-height: 1px;
   //margin-left: 30px;
-  width: 770px;
+  max-width: 770px;
   position: static;
   flex: 1 1 auto;
 }
@@ -171,4 +171,5 @@ ul.breadcrumb.breadcrumb__t {
 }
 
 @import 'get-quote';
+@import 'page-content';
 @import 'magento-development';
