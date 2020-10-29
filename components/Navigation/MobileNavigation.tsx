@@ -14,7 +14,7 @@ const data = [
   },
   {
     value: '2',
-    label: 'Services',
+    label: <span className="hasChildren">Services</span>,
     children: [
       {
         label: 'Magento Development',
@@ -33,7 +33,7 @@ const data = [
       }],
   }, {
     value: '3',
-    label: 'Partnerships',
+    label: <span className="hasChildren">Partnerships</span>,
     children: [
       {
         label: 'Outsourcing',
@@ -47,7 +47,7 @@ const data = [
   },
   {
     value: '4',
-    label: 'Company',
+    label: <span className="hasChildren">Company</span>,
     children: [
       {
         label: 'About',
@@ -67,7 +67,7 @@ const data = [
   },
   {
     value: '5',
-    label: 'Faq',
+    label: <span className="hasChildren">Faq</span>,
     children: [
       {
         label: 'General',
@@ -98,9 +98,12 @@ export function MobileNavigation() {
   const onChange = (value) => {
     data.forEach((dataItem) => {
       if (dataItem.value === value[0]) {
+        // (dataItem.children.length == 0) && (<div>asda</div>)
+
         if (dataItem.link != null) {
           router.push(dataItem.link)
           setIsShowMenu(false)
+          // console.log(" asdasda" , dataItem.children.length);
         }
 
         if (dataItem.children && value[1]) {
@@ -163,7 +166,7 @@ export function MobileNavigation() {
         <NavBar
           // leftContent={}
           rightContent={<a><img onClick={handleClick} src="/assets/imgs/menu.svg"
-                                                 className="am-icon am-icon-md" alt=""/></a>}
+                                className="am-icon am-icon-md" alt=""/></a>}
           mode="light"
           // icon={<img src="/assets/imgs/menu.svg"
           //            className="am-icon am-icon-md" alt=""/>}

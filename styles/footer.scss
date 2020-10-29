@@ -265,6 +265,7 @@
 
     @media (max-width: $md1+px) {
       align-self: flex-end;
+      z-index: 2;
     }
   }
 
