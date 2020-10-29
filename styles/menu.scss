@@ -1,8 +1,19 @@
 
-
-
 .top-nav-bar {
   display: none;
+}
+
+.hasChildren {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.hasChildren:before {
+  position: absolute;
+  right: 10px;
+  content: ">";
+  color: $bc10;
 }
 
 @media (max-width: $md3+px) {
