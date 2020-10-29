@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ScrollTopArrow from "../ScrollTopArrow"
+
 export function Footer() {
   return (
     <footer className="footer">
@@ -12,7 +13,7 @@ export function Footer() {
                      alt="Magento General Extension Partner" title="Magento General Extension Partner"/>
               </a>
             </Link>
-            <ScrollTopArrow />
+            <ScrollTopArrow/>
           </div>
           <div className="row">
             <div className="footer-text">
