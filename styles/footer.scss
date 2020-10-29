@@ -1,7 +1,10 @@
 .scrollTop {
-  @media (max-width: $md4+px) {
-    display: none !important;
+  @media (max-width: $md3+px) {
+    //display: none !important;
+    bottom: 60px;
+    z-index: 3;
   }
+
   position: fixed;
   right: 30px;
   bottom: 120px;

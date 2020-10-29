@@ -1,3 +1,11 @@
+p {
+  margin: 0 0 20px;
+}
+
+h4 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
 
 .custom-text-os {
   font-weight: normal;
@@ -7,31 +15,65 @@
   color: $tc14;
   margin: 0 0 10px;
 }
+
+
 ul.custom-icon-ul li {
-  font-size: 15px;
+
   color: $tc12;
   line-height: 35px;
   list-style: none;
+  font-weight: normal;
+  position: relative;
   font-family: $fontfamilyOpenSans-serif;
+  font-size: 13px;
+
+  p a {
+    color: $tc09 !important;
+  }
 }
+
+ul.custom-icon-ul li i {
+  padding-top: 2px !important;
+}
+
+ul.custom-icon-ul {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #b2b2b2;
+  font-weight: normal;
+  padding: 0;
+  margin: 0 0 9px 2.14285714em;
+  list-style-type: none;
+}
+
+//#ul-li-arrow li i {
+//  padding: 0;
+//}
+
 .fa-bar-chart-o:before, .fa-bar-chart:before {
   content: "\f080";
 }
-// TODO: fix it
-//.fa-thumbs-o-up:before {
-  //font-weight: 400;
-  //color: #000;
-  //content: "\f087";
-//}
+
 .size-full {
   @media (max-width: 980px) {
-
     box-sizing: border-box;
     width: 100%;
 
   }
+
+  font-family: $fontTrebuchet;
+  font-size: 13px;
+  line-height: 18px;
+  color: $tc02;
+  font-weight: normal;
+  width: 700px;
+  max-width: 100%;
   height: auto;
-  max-width: 500px;
+  vertical-align: middle;
+  border: 0;
+  margin: 5px 0 10px 0;
+  max-height: 300px;
 }
 
 .alignnone {
@@ -50,11 +92,39 @@ ul.custom-icon-ul li {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #b2b2b2;
+  color: $tc02;
   font-weight: normal;
   padding: 0;
-  margin: 0 0 9px 25px;
-  padding-left: 0;
-  margin-left: 2.14285714em;
+  margin: 0 0 9px 2.14285714em;
   list-style-type: none;
+
 }
+
+i.fa-li.fa.fa-angle-right:before {
+  content: "\f105";
+}
+
+i.fa-li.fa.fa-lg {
+  font: normal normal normal 18px/1 $fontAwesome;
+  bottom: .14285714em;
+  text-align: center;
+}
+
+i.fa-li.fa.fa-angle-right {
+  height: 15px;
+  color: $tc12;
+  list-style: none;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: .14285714em;
+  text-align: center;
+  padding-top: 2px !important;
+  font-family: $fontAwesome;
+}
+
