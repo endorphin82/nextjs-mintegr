@@ -16,6 +16,9 @@ h4 {
   margin: 0 0 10px;
 }
 
+.upper {
+  text-transform: uppercase;
+}
 
 ul.custom-icon-ul li {
 
@@ -28,7 +31,12 @@ ul.custom-icon-ul li {
   font-size: 13px;
 
   p a {
-    color: $tc09 !important;
+    color: $tc09;
+  }
+
+  p a:hover {
+    color: $tc16;
+    transition: all .3s ease 0s;
   }
 }
 

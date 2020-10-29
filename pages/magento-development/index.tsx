@@ -1,6 +1,7 @@
 import TitleOfAnyPage from "../../components/TitleOfAnyPage";
 import RightSidebar from "../../components/RightSidebar";
 import {MainLayout} from "../../components/MainLayout";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -25,49 +26,85 @@ export default function Page() {
             <h4 className="custom-h4">Our services include the following:</h4>
             <ul id="ul-li-arrow" className="fa-ul custom-icon-ul">
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="/migration/">Migration</a> 1.x - 2.x</p>
+                <p className="custom-text-os">
+                  <Link href={'/migration/'}>
+                    <a>Migration</a>
+                  </Link>
+                  1.x - 2.x
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="/creating-new-store-scratch/">Creating new
-                  store from scratch</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/creating-new-store-scratch/'}>
+                    <a>Creating new store from scratch</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/design/">Custom Design</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/design/'}>
+                    <a>Custom Design</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/technical-support/">Ongoing support</a> for
-                  the existing projects</p>
+                <p className="custom-text-os">
+                  <Link href={'/technical-support/'}>
+                    <a>Ongoing support</a>
+                  </Link> for the existing projects
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/extending-extensions/">Extending
-                  extensions</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/extending-extensions/'}>
+                    <a>Extending extensions</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/3rd-party-integration/">3rd party
-                  integration</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/3rd-party-integration/'}>
+                    <a>3rd party integration</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/amazon-ebay-synchronizations/">Amazon, eBay
-                  synchronizations</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/amazon-ebay-synchronizations/'}>
+                    <a>Amazon, eBay synchronizations</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/server-configuration/">Server
-                  configuration</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/server-configuration/'}>
+                    <a>Server configuration</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/optimization-frontend-backend-side/">Optimization
-                  (frontend/backend) side</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/optimization-frontend-backend-side/'}>
+                    <a>Optimization (frontend/backend) side</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a
-                  href="http://mintegr.loc/installation-configuration-search-engines-solr-sphinx/">Installation and
-                  configuration of search engines (Solr, Sphinx)</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/installation-configuration-search-engines-solr-sphinx/'}>
+                    <a>Installation and configuration of search engines (Solr, Sphinx)</a>
+                  </Link>
+                </p>
               </li>
               <li><i className="fa-li fa fa-angle-right" aria-hidden="true"></i>
-                <p className="custom-text-os"><a href="http://mintegr.loc/seo-optimization/">SEO optimization</a></p>
+                <p className="custom-text-os">
+                  <Link href={'/seo-optimization/'}>
+                    <a>SEO optimization</a>
+                  </Link>
+                </p>
               </li>
             </ul>
-            <p>&nbsp;</p>
+            <p/>
             <h4 className="custom-h4">We offer:</h4>
             <ul className="fa-ul custom-icon-ul">
               <li><i className="fa-li fa fa-bar-chart fa-lg" aria-hidden="true"></i>

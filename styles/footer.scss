@@ -50,6 +50,7 @@
 
 
 .footer {
+  padding-top: 20px;
   // .footer__partner
 
   &__partner {
@@ -230,21 +231,6 @@
     order: 3;
     display: flex;
     margin-bottom: 0;
-    //margin-right: 10px;
-    //font-variant: tabular-nums;
-    //font-feature-settings: 'tnum', "tnum";
-    //font-size: 14px;
-    //line-height: 1;
-    //color: #b2b2b2;
-    //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    //padding: 0;
-    //margin: 0;
-    //border: 0;
-    //box-sizing: border-box;
-    //margin-top: 0;
-    //margin-bottom: 1em;
-    //display: flex;
-    //margin-right: 10px;
 
     li > a {
       background-repeat: no-repeat;
@@ -262,6 +248,7 @@
 
     a:hover {
       background-color: $tc16;
+      transition: all 0.3s ease 0s;
     }
   }
 }
