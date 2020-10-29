@@ -1,8 +1,10 @@
 .scrollTop {
   @media (max-width: $md3+px) {
-    //display: none !important;
     bottom: 60px;
     z-index: 3;
+  }
+  @media (max-width: $md1+px) {
+    display: none !important;
   }
 
   position: fixed;
@@ -260,7 +262,12 @@
       background-color: $tc16;
       transition: all 0.3s ease 0s;
     }
+
+    @media (max-width: $md1+px) {
+      align-self: flex-end;
+    }
   }
+
 }
 
 .row {
