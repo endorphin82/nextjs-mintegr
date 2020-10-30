@@ -3,7 +3,6 @@ import {useSetIsShowMenu} from "../../redux/hooks";
 import {Menu, ActivityIndicator, NavBar} from 'antd-mobile';
 import {useState} from "react";
 import {useRouter} from 'next/router'
-import Link from "next/link";
 
 const data = [
   {
@@ -98,8 +97,6 @@ export function MobileNavigation() {
   const onChange = (value) => {
     data.forEach((dataItem) => {
       if (dataItem.value === value[0]) {
-        // (dataItem.children.length == 0) && (<div>asda</div>)
-
         if (dataItem.link != null) {
           router.push(dataItem.link)
           setIsShowMenu(false)
