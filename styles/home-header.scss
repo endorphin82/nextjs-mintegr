@@ -1,0 +1,36 @@
+.ant-card {
+  background-color: rgba(30, 115, 190, 0.2);
+
+  border: 0;
+  width: 300px;
+  text-align: center;
+  //opacity: 0.2;
+
+
+
+  &-head {
+    //backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    border: 0
+  }
+
+
+  &-body {
+
+    //background-color:
+    //        'rgba(255, 255, 255, 0.2)',
+
+    border: 0;
+
+    .title-header {
+      //color: #000 !important;
+      //opacity: 1 !important;
+    }
+  }
+
+  &-hoverable {
+    //background-color: $tc09 !important;
+  }
+}
+.ant-card.active{
+  background-color: rgba(30, 115, 190, 0.2);
+}

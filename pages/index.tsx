@@ -1,9 +1,9 @@
-import {MainLayout} from "../components/MainLayout";
+import {HomeLayout} from "../components/HomeLayout";
 
 export default function Home() {
   return (
-    <MainLayout>
+    <HomeLayout>
       content
-    </MainLayout>
+    </HomeLayout>
   )
 }
