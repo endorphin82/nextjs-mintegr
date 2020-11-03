@@ -1,11 +1,10 @@
-
 .header {
   // TODO: effect background header
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../public/assets/imgs/new-bg.jpg");
+  background-image: url('../public/assets/imgs/new-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +24,6 @@
 
   //background-image: url("https://m-integration.com/wp-content/uploads/2017/09/new-bg.jpg");
 
-
   // .header__logo
   &__logo img {
     width: 125px;
@@ -42,32 +40,30 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    line-height: 1.0;
+    line-height: 1;
+    // &-icon {
+    //   display: none;
+    //   cursor: pointer;
 
-    &-icon {
-      display: none;
-      cursor: pointer;
+    //   &.active span {
+    //     transform: scale(0);
+    //     background-color: $tc051;
+    //   }
 
-      &.active span {
-        transform: scale(0);
-        background-color: $tc051;
-      }
+    //   &.active:before {
+    //     transform: rotate(45deg);
+    //     top: 9px;
+    //     background-color: $tc051;
+    //   }
 
-      &.active:before {
-        transform: rotate(45deg);
-        top: 9px;
-        background-color: $tc051;
-      }
+    //   &.active:after {
+    //     transform: rotate(-45deg);
+    //     bottom: 9px;
+    //     background-color: $tc051;
+    //   }
 
-      &.active:after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-        background-color: $tc051;
-      }
-
-      // .menu__icon
-
-    }
+    //   // .menu__icon
+    // }
   }
 
   &__logo {
@@ -98,6 +94,7 @@
     > li {
       font-size: 13px;
       color: $tc02;
+      z-index: 1;
     }
 
     li a {
@@ -136,13 +133,11 @@
       cursor: pointer;
       @media (max-width: 1199px) {
         padding: 10px 26px 28px 28px;
-
       }
       @media (max-width: 980px) {
         padding: 10px 15px 28px 15px;
       }
     }
-
 
     > li > ul {
       background: rgba(133, 170, 212, 0.25);
@@ -222,19 +217,17 @@
       //overflow: hidden;
       //opacity: 0;
       //display: flex
-//      //display: none;
-//      flex: 0;
-//      //opacity: 0;
-//      //max-height: 0;
-//      //visibility: hidden;
-//      background: rgba(133, 170, 212, 0.25);
-//      //transition: height 1.1s ease-in-out;
+      //      //display: none;
+      //      flex: 0;
+      //      //opacity: 0;
+      //      //max-height: 0;
+      //      //visibility: hidden;
+      //      background: rgba(133, 170, 212, 0.25);
+      //      //transition: height 1.1s ease-in-out;
       transition: 2s ease;
-//position: relative;
-//      border: 1px solid red;
-//      flex: 0;
-
-
+      //position: relative;
+      //      border: 1px solid red;
+      //      flex: 0;
     }
 
     li:hover ul {
@@ -265,17 +258,14 @@
       // TODO: transition: height 1.1s ease-in-out;
     }
 
-
     li:hover ul {
       position: absolute;
-
     }
   }
 }
 
 @media (max-width: $md3+px) {
   .header {
-
     li ul {
       background: $bc081 !important;
     }
@@ -305,7 +295,6 @@
       }
     }
 
-
     li:hover ul {
       position: static;
       margin-left: 50px;
@@ -328,4 +317,3 @@
     }
   }
 }
-
