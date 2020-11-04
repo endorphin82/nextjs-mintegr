@@ -1,37 +1,13 @@
-//.flex{
-//  display:flex;
-//}
-//.flex__column{
-//  min-width: 0;
-//  //width: 100px;
-//}
-//.slider{
-//  min-width: 0;
-//  //width: 100px;
-//}
-//
-//.slick-list{
-//  overflow: hidden;
-//}
-
-.slick-slider.top-slider.slick-initialized {
-  width: 770px;
-  margin: 40px auto 0 auto;
-}
-
 .slick-slider {
   min-width: 0;
-  //background-color: #ccc;
   background-color: transparent;
   /*width: 100px;*/
 }
 
-/*//*/
 .slick-list {
   overflow: hidden;
   background-color: transparent;
   position: relative;
-  //display: block;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -42,6 +18,9 @@
   width: 760px;
   margin: auto;
   min-width: 0;
+  @media (max-width: $md5+px) {
+    width: 670px;
+  }
 }
 
 .slick-slide {
@@ -55,185 +34,193 @@
   display: flex;
   min-width: 0;
   width: 100%;
-  // min-height: 640px;
   align-items: stretch;
   justify-content: stretch;
 }
 
-.slick-slider.top-slider.slick-initialized
-.slick-slide {
-  //> div {
-  //  display: flex;
-  //}
-}
-
-.slick-slider.top-slider.slick-initialized
-.slick-slide.slick-current {
-  // background-color: aqua;
-  .ant-card {
-    // background-color: violet;
-    --antd-wave-shadow-color: #1890ff;
-    --scroll-bar: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    text-align: center;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    box-sizing: border-box;
-    padding: 0;
-    // color: rgba(0, 0, 0, 0.85);
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5715;
-    list-style: none;
-    font-feature-settings: 'tnum', 'tnum';
-    position: relative;
-    background: #fff;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: box-shadow 0.3s, border-color 0.3s;
-    background-color: rgba(30, 115, 190, 0.2);
-    //border: 0;
-    //width: 220px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-grow: 1;
-    border-color: transparent;
-    box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
-    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
-    transition: box-shadow 0.3s, border-color 0.3s;
-  }
-}
-
-
 .slick-slider.top-slider.slick-initialized {
+  @media (max-width: $md3+px) {
+    display: none;
+  }
+  width: 850px;
+  margin: 40px auto 0 auto;
+  @media (max-width: $md5+px) {
+    width: 670px;
+  }
   display: flex;
 
-  .slick-track {
+  .slick-list {
     display: flex;
 
-    .ant-card {
-      background-color: transparent;
-      //border: 0;
-      width: 240px;
-      //height: 478px;
-      border: 1px solid #fff;
-      margin: 10px;
-
+    .slick-track {
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      align-items: stretch;
 
-      //flex-grow: 1;
-      &-body {
+      .slick-slide {
         display: flex;
-        flex-direction: column;
+        //border: 1px solid rgba(250, 0, 250, 0.5);
         flex-grow: 1;
-      }
-
-      &__content {
-        display: inline-flex;
-        text-align: justify;
-        font-size: 13px;
-        line-height: 18px;
-        font-weight: normal;
-        margin: 0 0 20px;
-        font-family: $fontfamilyOpenSans;
-        color: $tc01;
-        flex-grow: 1;
-      }
-
-      &__read-more-button {
-        font-family: $fontTrebuchet;
-        font-size: 13px;
-        line-height: 18px;
-        font-weight: normal;
-        color: $tc01;
-
-        bottom: 0;
-        left: 28%;
-        text-align: center;
-        margin: 30px 0;
-        display: inline-flex;
-
-        span {
-          display: inline-flex;
-          font-family: $fontTrebuchet;
-          font-size: 13px;
-          line-height: 18px;
-          font-weight: normal;
-          text-align: center;
-          background: $bc01;
-          padding: 10px 20px;
-          border-radius: 5px;
-          color: $tc17;
-          transition: all 0.3s ease;
+        height: auto;
+        padding: 10px;
+        align-items: stretch; //optional
+        justify-content: center; //optional
+        width: 270px;
+        @media (max-width: $md5+px) {
+          width: 220px;
         }
 
-        span:hover {
-          font-family: $fontTrebuchet;
-          font-size: 13px;
-          line-height: 18px;
-          font-weight: normal;
-          text-align: center;
-          padding: 10px 20px;
-          border-radius: 5px;
-          background: rgba(0, 0, 0, 0.55);
-          color: $tc01;
-          transition: all 0.3s ease;
+        > div {
+          flex-grow: 1;
+          display: flex;
+
+          > div {
+            display: flex !important;
+            flex-grow: 1;
+
+          }
+        }
+
+        .ant-card {
+          box-sizing: border-box;
+          background-color: transparent;
+          border: 1px solid rgba(0, 0, 0, 0);
+          flex: 1 1 auto;
+          margin: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          &-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+          }
+
+          &__content {
+            display: inline-flex;
+            text-align: justify;
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: normal;
+            margin: 0 0 20px;
+            font-family: $fontfamilyOpenSans;
+            color: $tc01;
+            //flex-grow: 1;
+          }
+
+          &__read-more-button {
+            font-family: $fontTrebuchet;
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: normal;
+            color: $tc01;
+            bottom: 0;
+            left: 28%;
+            display: inline-flex;
+            justify-content: center;
+            margin-top: auto;
+
+            span {
+              display: inline-flex;
+              font-family: $fontTrebuchet;
+              font-size: 13px;
+              line-height: 18px;
+              font-weight: normal;
+              background: $bc01;
+              padding: 10px 20px;
+              border-radius: 5px;
+              color: $tc17;
+              transition: all 0.3s ease;
+            }
+
+            span:hover {
+              font-family: $fontTrebuchet;
+              font-size: 13px;
+              line-height: 18px;
+              font-weight: normal;
+              text-align: center;
+              padding: 10px 20px;
+              border-radius: 5px;
+              background: rgba(0, 0, 0, 0.55);
+              color: $tc01;
+              transition: all 0.3s ease;
+            }
+          }
+
+          &-head {
+            border: 0;
+          }
+
+          &-body {
+            padding-top: 0;
+            border: 0;
+
+            .title-header {
+              padding-top: 0;
+              text-rendering: optimizelegibility;
+              margin: 0 0 9px;
+              font: normal 30px/30px Open Sans;
+              font-size: 24px;
+              text-align: center;
+              color: $tc01;
+            }
+          }
+
+          &.active {
+            background-color: transparent;
+          }
+        }
+
+        &.slick-current {
+          // background-color: aqua;
+          .ant-card {
+            // background-color: violet;
+            --antd-wave-shadow-color: #1890ff;
+            --scroll-bar: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+            'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            text-align: center;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            box-sizing: border-box;
+            padding: 0;
+            font-size: 14px;
+            font-variant: tabular-nums;
+            line-height: 1.5715;
+            list-style: none;
+            font-feature-settings: 'tnum', 'tnum';
+            position: relative;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: box-shadow 0.3s, border-color 0.3s;
+            background-color: rgba(30, 115, 190, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex-grow: 1;
+            //border-color: transparent;
+            box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+            0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+            transition: box-shadow 0.3s, border-color 0.3s;
+          }
+        }
+
+        &:hover.slick-current:not(:hover) {
+          //background-color: transparent;
         }
       }
-
-      &-head {
-        border: 0;
-      }
-
-      &-body {
-        padding-top: 0;
-        border: 0;
-
-        .title-header {
-          padding-top: 0;
-          text-rendering: optimizelegibility;
-          margin: 0 0 9px;
-          font: normal 30px/30px Open Sans;
-          font-size: 24px;
-          text-align: center;
-          color: $tc01;
-        }
-      }
-
-      &.active {
-        background-color: transparent;
-      }
-    }
-
-    .slick-slide {
-      display: flex;
-      height: auto;
-      padding: 10px;
-      align-items: center; //optional
-      justify-content: center; //optional
-
-      > div {
-        display: flex;
-      }
-
-      &:hover.slick-current:not(:hover) {
-        background-color: transparent;
-      }
-
     }
   }
 }
 
 .slick-slider.bottom-slider.slick-initialized {
+  @media (max-width: $md3+px) {
+    display: none;
+  }
   margin-top: 50px;
   position: relative;
   height: 50px;
-
   display: flex;
   justify-content: center;
 
@@ -324,6 +311,9 @@
   background: url('/assets/imgs/menu_line.png') 0 0 repeat-x;
   margin-top: 15px;
   padding-top: 15px;
+  @media (max-width: $md3+px) {
+    display: none;
+  }
 }
 
 /** Text Animation **/
@@ -367,6 +357,9 @@
   opacity: 1;
   width: 100%;
   padding: 10px 20px 30px 0;
+  @media (max-width: $md3+px) {
+    display: none;
+  }
 }
 
 /* Text Animation End **/

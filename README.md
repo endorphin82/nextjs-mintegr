@@ -1,8 +1,8 @@
 # nextjs-mintegr
-TODO: all cards same height
+TODO: all cards same height - done
 
 TODO: all header darker - done
 
-TODO: slower sliders
+TODO: slower sliders - done
 
-TODO: hide home header in mobile
+TODO: hide home header in mobile - done

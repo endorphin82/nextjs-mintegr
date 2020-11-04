@@ -10,7 +10,7 @@ export function HomeNavigation() {
   const [nav2, setNav2] = useState()
 
   const settings1 = {
-    variableWidth: true,
+    variableWidth: false,
     pauseOnHover: true,
     pauseOnDotsHover: true,
     dots: false,
@@ -21,7 +21,7 @@ export function HomeNavigation() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 7000,
     asNavFor: nav2,
     adaptiveHeight: false
   }
