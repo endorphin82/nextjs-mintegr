@@ -1,13 +1,15 @@
-import {Navigation} from "../Navigation/Navigation";
+import { Navigation } from "../Navigation/Navigation"
 
 export function Header() {
   return (
-    <div className="header">
+    <span className="darker-effect">
+      <div className="header">
 
-      <div className="container">
-        <Navigation/>
+        <div className="container">
+          <Navigation />
+        </div>
       </div>
+    </span>
 
-    </div>
   )
 }

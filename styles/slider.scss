@@ -15,19 +15,15 @@
 //}
 
 .slick-slider.top-slider.slick-initialized {
-
   width: 770px;
   margin: 40px auto 0 auto;
 }
+
 .slick-slider {
   min-width: 0;
   //background-color: #ccc;
   background-color: transparent;
   /*width: 100px;*/
-}
-.top-slider {
-  /*display: none;*/
-
 }
 
 /*//*/
@@ -35,7 +31,7 @@
   overflow: hidden;
   background-color: transparent;
   position: relative;
-  display: block;
+  //display: block;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -54,6 +50,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .slick-track {
   display: flex;
   min-width: 0;
@@ -63,6 +60,14 @@
   justify-content: stretch;
 }
 
+.slick-slider.top-slider.slick-initialized
+.slick-slide {
+  //> div {
+  //  display: flex;
+  //}
+}
+
+.slick-slider.top-slider.slick-initialized
 .slick-slide.slick-current {
   // background-color: aqua;
   .ant-card {
@@ -70,8 +75,8 @@
     --antd-wave-shadow-color: #1890ff;
     --scroll-bar: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
@@ -88,8 +93,8 @@
     cursor: pointer;
     transition: box-shadow 0.3s, border-color 0.3s;
     background-color: rgba(30, 115, 190, 0.2);
-    border: 0;
-    width: 220px;
+    //border: 0;
+    //width: 220px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -97,69 +102,228 @@
     flex-grow: 1;
     border-color: transparent;
     box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
-      0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
     transition: box-shadow 0.3s, border-color 0.3s;
   }
 }
-.slick-slide.slick-active {
-  /*background-color: aqua;*/
-  /*z-index: 10;*/
-}
-.slick-slider.bottom-slider {
-  margin-top: 50px;
-  position: relative;
-  height: 50px;
-  .slick-dots{
-    bottom: -50px;
-  }
-  .slick-track {
-    display: flex;
-    .slick-slide {
-      display: flex;
-      height: auto;
-      align-items: center; //optional
-      justify-content: center; //optional
-    }
-  }
-}
 
-.slick-slider.bottom-slider .slick-list .slick-track .slick-slide {
-  /*height: 200px !important;*/
-}
-.slick-slider.bottom-slider .slick-list .slick-track .slick-slide {
-  // height: 50px;
-}
-.slick-slider.bottom-slider
-  .slick-list
-  .slick-track
-  .slick-slide.slick-current {
-  background-color: transparent;
-  animation-name: fadeInUpSD;
-  animation-duration: 1s;
-  opacity: 1;
-  width: 100%;
-  padding: 10px 20px 30px 0;
-}
 
 .slick-slider.top-slider.slick-initialized {
   display: flex;
+
   .slick-track {
     display: flex;
+
+    .ant-card {
+      background-color: transparent;
+      //border: 0;
+      width: 240px;
+      //height: 478px;
+      border: 1px solid #fff;
+      margin: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      //flex-grow: 1;
+      &-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      &__content {
+        display: inline-flex;
+        text-align: justify;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: normal;
+        margin: 0 0 20px;
+        font-family: $fontfamilyOpenSans;
+        color: $tc01;
+        flex-grow: 1;
+      }
+
+      &__read-more-button {
+        font-family: $fontTrebuchet;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: normal;
+        color: $tc01;
+
+        bottom: 0;
+        left: 28%;
+        text-align: center;
+        margin: 30px 0;
+        display: inline-flex;
+
+        span {
+          display: inline-flex;
+          font-family: $fontTrebuchet;
+          font-size: 13px;
+          line-height: 18px;
+          font-weight: normal;
+          text-align: center;
+          background: $bc01;
+          padding: 10px 20px;
+          border-radius: 5px;
+          color: $tc17;
+          transition: all 0.3s ease;
+        }
+
+        span:hover {
+          font-family: $fontTrebuchet;
+          font-size: 13px;
+          line-height: 18px;
+          font-weight: normal;
+          text-align: center;
+          padding: 10px 20px;
+          border-radius: 5px;
+          background: rgba(0, 0, 0, 0.55);
+          color: $tc01;
+          transition: all 0.3s ease;
+        }
+      }
+
+      &-head {
+        border: 0;
+      }
+
+      &-body {
+        padding-top: 0;
+        border: 0;
+
+        .title-header {
+          padding-top: 0;
+          text-rendering: optimizelegibility;
+          margin: 0 0 9px;
+          font: normal 30px/30px Open Sans;
+          font-size: 24px;
+          text-align: center;
+          color: $tc01;
+        }
+      }
+
+      &.active {
+        background-color: transparent;
+      }
+    }
+
     .slick-slide {
       display: flex;
       height: auto;
       padding: 10px;
       align-items: center; //optional
       justify-content: center; //optional
+
+      > div {
+        display: flex;
+      }
+
+      &:hover.slick-current:not(:hover) {
+        background-color: transparent;
+      }
+
     }
   }
 }
 
-.slick-slider.top-slider
-  .slick-list
-  .slick-track
-  .slick-slide:hover.slick-current:not(:hover) {
-  background-color: transparent;
+.slick-slider.bottom-slider.slick-initialized {
+  margin-top: 50px;
+  position: relative;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+
+  .slick-list {
+    .slick-track {
+      display: flex;
+
+      .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center; //optional
+        justify-content: center; //optional
+        &.slick-current {
+          background-color: transparent;
+          animation-name: fadeInUpSD;
+          animation-duration: 1s;
+          opacity: 1;
+          width: 100%;
+          padding: 10px 20px 30px 0;
+        }
+      }
+    }
+  }
+
+  .slick-active button {
+    background: $bc08;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: 70px;
+    display: inline-flex;
+    width: 30%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin: 0 4px;
+      padding: 0;
+      cursor: pointer;
+
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: flex;
+        width: 16px;
+        height: 16px;
+        // padding: 4px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 0;
+        outline: none;
+
+        &::before {
+          font-size: 18px;
+          color: $tc01;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .camera_caption {
+    color: $tc01;
+    font-family: $fontfamilyOpenSans;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 300;
+    height: 50px;
+  }
+}
+
+.camera_line {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #b2b2b2;
+  font-weight: normal;
+  cursor: default !important;
+  margin: 35px auto 0;
+  width: 400px;
+  background: url('/assets/imgs/menu_line.png') 0 0 repeat-x;
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 /** Text Animation **/
@@ -206,76 +370,3 @@
 }
 
 /* Text Animation End **/
-
-.slick-dots {
-  position: absolute;
-  bottom: 10px;
-  display: inline-flex;
-  width: 30%;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: 0 4px;
-  padding: 0;
-  cursor: pointer;
-}
-
-.slick-active button {
-  background: $bc08;
-}
-
-.slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 16px;
-  height: 16px;
-  // padding: 4px;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 0;
-  outline: none;
-}
-
-.slick-dots li button::before {
-  font-size: 18px;
-  color: #fff;
-  opacity: 1;
-}
-.camera_caption {
-  color: #fff;
-  font-family: $fontfamilyOpenSans;
-  font-size: 18px;
-  line-height: 35px;
-  font-weight: 300;
-  height: 50px;
-}
-.camera_line {
-  width: 300px;
-  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  color: #b2b2b2;
-  font-weight: normal;
-  cursor: default !important;
-  margin: 35px auto 0;
-  width: 400px;
-  background: url('/assets/imgs/menu_line.png') 0 0 repeat-x;
-  margin-top: 15px;
-  padding-top: 15px;
-}
-.slick-slider.bottom-slider.slick-initialized {
-  display: flex;
-  justify-content: center;
-
-  .slick-dots {
-    margin: 0 auto;
-  }
-}
