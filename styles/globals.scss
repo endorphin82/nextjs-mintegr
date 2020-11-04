@@ -2,7 +2,7 @@
 @import 'nav';
 @import 'main';
 @import 'footer';
-@import 'home-header';
+@import 'slider';
 @import 'page';
 @import 'menu';
 
@@ -22,7 +22,7 @@ body {
   justify-content: space-around;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $md6+px) {
   .container,
   .left-sidebar,
   .footer__bottom__container {

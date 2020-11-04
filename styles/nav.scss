@@ -1,28 +1,18 @@
+.darker-effect {
+  background-color: $bc09;
+}
+
 .header {
-  // TODO: effect background header
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 0 120px 0;
   background-image: url('../public/assets/imgs/new-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 50px 0 120px 0;
-  //background-color: $bc09;
-  //opacity: 0.8;
-  //&:before {
-  //  content: "";
-  //  position: absolute;
-  //  left: 0;
-  //  top: 0;
-  //  width: 100%;
-  //  height: 246px;
-  //  opacity: 0.2;
-  //  background-color: $bc09;
-  //}
-
-  //background-image: url("https://m-integration.com/wp-content/uploads/2017/09/new-bg.jpg");
+  opacity: 0.8;
 
   // .header__logo
   &__logo img {
