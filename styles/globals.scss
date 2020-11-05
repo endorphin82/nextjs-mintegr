@@ -22,15 +22,13 @@ body {
   justify-content: space-around;
 }
 
-@media (min-width: $md6+px) {
-  .container,
-  .left-sidebar,
-  .footer__bottom__container {
-    width: 1170px;
-  }
+.container,
+.left-sidebar,
+.footer__bottom__container {
+  width: 1170px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $md6+px) {
   .container,
   .left-sidebar,
   .right-sidebar,
@@ -40,9 +38,6 @@ body {
 }
 
 @media (max-width: 980px) {
-  main {
-    //padding: 0 15px;
-  }
   .container,
   .left-sidebar,
   .right-sidebar,
