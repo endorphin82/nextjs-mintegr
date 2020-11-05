@@ -10,8 +10,8 @@ h4 {
 .custom-text-os {
   font-weight: normal;
   font-family: $fontfamilyOpenSans-serif;
-  font-size: 14px !important;
-  line-height: 22px !important;
+  font-size: 14px;
+  line-height: 22px;
   color: $tc14;
   margin: 0 0 10px;
 }
@@ -41,7 +41,7 @@ ul.custom-icon-ul li {
 }
 
 ul.custom-icon-ul li i {
-  padding-top: 2px !important;
+  padding-top: 2px;
 }
 
 ul.custom-icon-ul {
@@ -132,7 +132,7 @@ i.fa-li.fa.fa-angle-right {
   width: 2.14285714em;
   top: .14285714em;
   text-align: center;
-  padding-top: 2px !important;
+  padding-top: 2px;
   font-family: $fontAwesome;
 }
 
