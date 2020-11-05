@@ -1,4 +1,4 @@
-FROM node:12
+FROM mhart/alpine-node:12
 
 # Setting working directory. All the path will be relative to WORKDIR
 WORKDIR /usr/src/app
