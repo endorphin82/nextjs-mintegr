@@ -47,7 +47,6 @@ export function HomeNavigation() {
     const divParent = e.currentTarget.parentElement
     // @ts-ignore
     const sliderIndex = divParent.parentElement.getAttribute("data-index")
-    console.log("sliderIndex", sliderIndex)
     // @ts-ignore
     nav1.slickGoTo(Number(sliderIndex), true)
   }
