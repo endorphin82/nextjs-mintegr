@@ -14,7 +14,7 @@ COPY . .
 #RUN npm update
 RUN npm run build
 #RUN rm -rf $(ls -I package.json -I .next -I config -I next.config.js -I schema.graphql -I .sequelizerc)
-RUN rm -rf components pages styles
+RUN rm -rf components pages styles node_modules lib redux public
 
 #RUN npm run build
 # Running the app
