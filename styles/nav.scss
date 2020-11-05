@@ -1,5 +1,17 @@
 .darker-effect {
+  position: relative;
   background-color: $bc09;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/assets/imgs/new-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+  }
 }
 
 .header {
@@ -8,11 +20,7 @@
   flex-direction: column;
   align-items: center;
   padding: 50px 0 120px 0;
-  background-image: url('../public/assets/imgs/new-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.8;
+  opacity: 1;
 
   // .header__logo
   &__logo img {
@@ -31,35 +39,15 @@
     padding: 0;
     list-style: none;
     line-height: 1;
-    // &-icon {
-    //   display: none;
-    //   cursor: pointer;
-
-    //   &.active span {
-    //     transform: scale(0);
-    //     background-color: $tc051;
-    //   }
-
-    //   &.active:before {
-    //     transform: rotate(45deg);
-    //     top: 9px;
-    //     background-color: $tc051;
-    //   }
-
-    //   &.active:after {
-    //     transform: rotate(-45deg);
-    //     bottom: 9px;
-    //     background-color: $tc051;
-    //   }
-
-    //   // .menu__icon
-    // }
   }
 
   &__logo {
-    //z-index: 4;
-    top: 20px !important;
-    left: 30px !important;
+    margin-top: 10px;
+    margin-left: 30px;
+    z-index: 1;
+    a{
+      //display: block;
+    }
   }
 
   &__nav {
@@ -121,6 +109,7 @@
       padding: 10px 44px 28px 44px;
       background: none;
       cursor: pointer;
+
       @media (max-width: 1199px) {
         padding: 10px 26px 28px 28px;
       }
