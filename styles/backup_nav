@@ -112,8 +112,8 @@
 
   &__logo {
     z-index: 4;
-    top: 20px !important;
-    left: 30px !important;
+    top: 20px;
+    left: 30px;
   }
 
   &__nav {
@@ -279,11 +279,11 @@
   .header {
 
     li ul {
-      background: $bc081 !important;
+      //background: $bc081 !important;
     }
 
     li:hover {
-      background: $bc081 !important;
+      //background: $bc081 !important;
     }
 
     #services,
@@ -371,7 +371,7 @@
       }
 
       li {
-        //padding: 0 0 25px 0 !important;
+
 
       }
     }

@@ -117,14 +117,14 @@
 
     > h2 {
       text-transform: uppercase;
-      margin: 10px 0 0 0 !important;
+      margin: 10px 0 0 0;
       text-align: center;
       color: $tc17;
       border-bottom: 0 none;
       font-size: 23px;
       line-height: 1;
       padding: 0;
-      font-weight: 400 !important;
+      font-weight: 400;
     }
   }
 }
