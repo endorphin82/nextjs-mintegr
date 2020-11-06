@@ -18,7 +18,7 @@ export function Navigation() {
 
       <ul className={isShowMenu ? "header__nav active" : "header__nav"}>
         <li id="services">
-          <a href="#">services</a>
+          <a href="#">Sservices</a>
           <ul>
             <li>
               <Link href={'/magento-development'}>
